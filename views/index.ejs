@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box"id="heading">    
+        <h1 ><%= day %></h1>
+    </div>
+    <div class="box">
+        <form action="/" method="post" class="item">
+            <input type="text" name="newItem" placeholder="new item" autocomplete="off">
+            <button type="submit" value="<%=day%>" name="value" >+</button>
+        </form>  
+        <% listItem.forEach(function(item) {%>
+        <form action="/delete" method="post">
+            <div class="item">
+                <input type="checkbox" name="checkbox" value="<%=item._id%>" onchange="this.form.submit()">
+                <p><%=item.title%></p>
+            </div>
+        </form>
+        <%})%>
+        
+    </div>
+    <%- include ('about'); %>
+    <%- include ('fotter'); %>
+    <script>
+         var ele = document.getElementById(footer) 
+         console.log(ele.innerHTML) 
+
+    </script>
+</body>
+</html>
