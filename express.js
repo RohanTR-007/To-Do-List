@@ -1,7 +1,6 @@
 const express = require('express');
 const ejs = require('ejs');
 const mongoose = require('mongoose');
-const { Item } = require('semantic-ui-react');
 const _ = require('lodash')
 
 var date = require(__dirname + '/date.js');
