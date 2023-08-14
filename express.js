@@ -56,6 +56,8 @@ app.get("/", (req, res, next) => {
     });
 })
 
+//hi
+
 app.post("/", (req, res, next) => {
     console.log(req.body)
     var itemName = req.body.newItem;
@@ -160,8 +162,8 @@ app.post("/:customListName", (req, res, next) => {
     res.render('list',{});
 })
 
-app.listen(3000, () => {
-    console.log('Server is running');
+app.listen(process.env.PORT||4000,()=>
+{
+    console.log("Server is running")
 })
-
 
