@@ -1,7 +1,6 @@
 const express = require('express');
 const ejs = require('ejs');
 const mongoose = require('mongoose');
-const { Item } = require('semantic-ui-react');
 const _ = require('lodash')
 
 var date = require(__dirname + '/date.js');
@@ -162,8 +161,8 @@ app.post("/:customListName", (req, res, next) => {
     res.render('list',{});
 })
 
-app.listen(process.env.PORT||4000,()=>
-{
-    console.log("Server is running")
+app.listen(3000, () => {
+    console.log('Server is running');
 })
+
 
